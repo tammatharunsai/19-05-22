@@ -1,0 +1,16 @@
+f = int(input("Find sum of prime numbers from : "))
+u = int(input("Find sum of prime numbers upto : "))
+sum = 0
+
+for i in range(f,u+1):
+
+    j = 2
+    
+    for j in range(2, i):
+        if (int(i % j) == 0):
+            j = i
+            break;
+    if j is not i:
+        sum += i
+
+print(sum)
